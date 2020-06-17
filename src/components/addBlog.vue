@@ -68,7 +68,6 @@ export default{
   },
   methods: {
     post: function() {
-      console.log(this.blog)
       this.$store.dispatch('addBlog',this.blog).then((data) => {
         this.submitted = true;
         this.$store.dispatch('loadBlog');

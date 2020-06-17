@@ -18,12 +18,10 @@ const mutations = {
 
 const actions = {
   addBlog(context,value) {
-    console.log(value)
-    return axios.post('http://localhost:3000/addBlog',value)
+    return axios.post('https://testspacewarapi.herokuapp.com/addblog',value)
   },
   loadBlog(context) {
-      axios.get('http://localhost:3000/showblogs').then(function(data){
-        console.log(data)
+      axios.get('https://testspacewarapi.herokuapp.com/showblogs').then(function(data){
         context.commit('setBlog',data.data)
         
     });
